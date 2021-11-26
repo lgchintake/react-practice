@@ -1,4 +1,4 @@
 .cache
 dist/
-node_modueles/
+node_modules/
 package-lock.json
