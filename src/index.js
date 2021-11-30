@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
-import SecondComponent from './components/second-component';
 
 import WelcomeComponent from "./components/welcome";
+import SecondComponent from './components/second-component';
 
 ReactDOM.render(
     <React.StrictMode>

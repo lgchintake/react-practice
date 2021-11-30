@@ -1,16 +1,24 @@
 import React from 'react';
 
 class Welcome extends React.Component {
-    render(){
+    render() {
         var myName = "Laxminarayan";
-        var fruits = ['Banana', 'Apple', 'Chiku'];
+        function getCurrentTime() {
+            return new Date().toTimeString();
+        }
+        var fruits = ['Banana', 'Apple', 'Chiku', 'Mango', 'PineApple', 'Orange', 'Grapes'];
+        var serverClass = "green";
         return (
-         <div>
-             <h1>Welcome Component, {myName}</h1>
-             {fruits.map( (fruit, index) => {
-                 return (<div key={index}>{fruit} - {index}</div>)
-             })}
-         </div>   
+            <div className="welcome-class">
+                <h1>Welcome Component, {myName}</h1>
+                <label>Today's date: </label> <span className={serverClass}>{getCurrentTime()}</span> <br />
+                <label>addition: </label> <span>{20 + 10}</span>
+                {
+                    fruits.map((fruit, index) => {
+                        return (<div key={index} className={"fruit-div " + (index % 2 == 0 ? "red" : "green")}>{fruit} - {index}</div>)
+                    })
+                }
+            </div>
         )
     }
 }
